@@ -15,14 +15,23 @@ $ pip install flask sqlalchemy flask-sqlalchemy
 ```
 
 ## Usage
+### Initialize Database 
+In python shell
+```
+>>> from bookmanager import db
+>>> db.create_all()
+>>> exit()
+```
 
-* activate virtual env
-
+### Run App
+Create virtual environment 
 ```
 python app.py
 ```
 
 ## Project Status
+![](preview.png)
+
 ### Features
 * Add, update, and delete volunteers
 * Check-in and check-out volunteers 
