@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+  </head>
+
+	<body>
+
+    <h1> Volunteer Management</h1>
+
+    <form method = 'POST' action="./home">
+      <input type = "submit" value="RETURN TO HOMEPAGE" name = "users">
+    </form>
+
+    <h2> Volunteer Status </h2>
+    
+    <p class="descript"> Checkin and Checkout Volunteers </p>
+
+<div class="row">
+  <div class="column">
+  <h2> Checked in </h2>
+  <table>
+      {% for volunteer in volunteers %}
+      <tr>
+        {% if volunteer.status %}
+          <td>{{volunteer.username}}</td>
+
+        <td>
+          <form method="POST" action="./checkin">
+            <input type="hidden" value="{{volunteer.username}}" name="name">
+            <button type=submit name="CHECKOUT" class="out">
+            <p class="button out"> Check Out</p>
+            </button>
+        </form>
+        {% endif %}
+        </td>
+      {% endfor %}
+    </tr>
+  </table>
+</div>
+
+<div class="column">
+  <h2> Checked out </h2>
+  <table>
+      {% for volunteer in volunteers %}
+      <tr>
+        {% if not volunteer.status %}
+          <td>{{volunteer.username}}</td>
+
+        <td>
+          <form method="POST" action="./checkin">
+            <input type="hidden" value="{{volunteer.username}}" name="name">
+            <button type=submit name="CHECKIN" class="in"> 
+            <p class="button in"> Check In</p>
+            </button>
+        </form>
+        {% endif %}
+        </td>
+      {% endfor %}
+    </tr>
+  </table>
+</div>
+</div>
+
+
+
+</body>
+</html>
+

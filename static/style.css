@@ -1,0 +1,113 @@
+h1{
+	text-align: left;
+	font-family: 'proxima-nova', sans-serif;
+	font-size: 50px;
+	padding: 40px; 
+	color: black;
+	background-color: #f8f8f8; 
+	margin-top: 0px;
+}
+
+h2{
+	font-family: Helvetica;
+	font-size: 30px;
+	margin-left: 1em;
+}
+
+p{
+	font-family: Helvetica;
+}
+
+p.descript{
+	margin-left: 2em;
+}
+
+table {
+	font-family: Helvetica;
+}
+
+input[type=text]{
+	font-size: 15px;
+	padding-top: 5px;
+	padding-bottom: 8px;
+	margin-left: 2em;
+}
+
+input[type=submit i]{
+	background-color: #0098e9; 
+	color: white;
+	font-size: 12px;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table{
+	margin-left:4em;
+}
+
+input[type=submit i]:hover {
+	background-color: #0088d1; 
+	color: white;
+}
+
+input.add{
+	background-color: #4CAF50; /*green*/
+	margin-left:0.5em;
+}
+
+input.add:hover{
+	background-color: #3c8c40; /*green*/
+}
+
+input.update{
+	margin-left: 1em;
+}
+
+input.delete{
+	background-color:#f44336; /*red*/
+}
+
+input.delete:hover{
+	background-color: #c3352b; /*red*/
+}
+
+button{
+	font-family: Helvetica;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	text-align: center;
+	display: inline-block;
+	margin left: 5px;
+}
+
+button.out:hover {
+	background-color: #3c8c40; /*green*/ 
+}
+
+button.out{
+	background-color: #4CAF50; /*green*/
+	text-align: center;
+}
+
+button.in:hover{
+	background-color: #c3352b; /*red*/
+}
+
+button.in{
+	background-color: #f44336; /*red*/
+	text-align: center;
+}
+
+
+.column{
+	background-color: #f8f8f8;
+	float:left;
+	width:48%;
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+}

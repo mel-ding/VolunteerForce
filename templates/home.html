@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+  </head>
+
+	<body>
+
+    <h1>Volunteer Management</h1>
+
+    <form method = 'POST' action="./status">
+      <input type = "submit" value="CHECKIN & CHECKOUT" name = "users">
+    </form>
+
+    <h2> Volunteers </h2>
+    
+    <p class="descript"> Add, edit, and delete volunteers </p>
+
+		<form method="POST" action="/">
+			<input type="text" name="name">
+			<input type="submit" value="ADD" class="add">
+		</form>
+
+    <table>
+    {% for volunteer in volunteers %}
+    	<tr>
+    		<td>
+    			{{volunteer.username}}
+    		</td>
+
+    		<td>
+      		<form method="POST" action="./update">
+    			<input type="hidden" value="{{volunteer.username}}" name="oldname">
+    			<input type="text" value="{{volunteer.username}}" name="newname">
+    			<input type="submit" value="UPDATE" class="update">
+  	  		</form>
+  	  	</td>
+
+  	  	<td>
+  	  			<form method="POST" action="./delete">
+  					<input type="hidden" value="{{volunteer.username}}" name="name">
+  					<input type="submit" value="DELETE" class="delete">
+	  			</form>
+	  		</td>
+	  	</tr>
+    {% endfor %}
+	</table>
+    </body>
+</html>
